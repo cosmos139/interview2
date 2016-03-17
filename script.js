@@ -24,6 +24,6 @@ var interview=function(a,b,c,d,e){
 			   	}																																						
 			return my_solution;
 }																																											
-var filter=_.reject(solution(),function(list){ return list[5][0]>10; });
+var filter=_.reject(solution(),function(list){ return list[5][0]>=10; });
 var filter2=_.reject(filter,function(list){return (_.uniq(_.flatten(list))).length<9;});
-var filter3=_.reject(filter2,function(list){return list[5][3]==0||list[5][3]==5;});
+var filter3=_.reject(filter2,function(list){return list[5][0]==0 || list[5][1]==0 || list[5][2]==0 || list[5][3]==0;});
